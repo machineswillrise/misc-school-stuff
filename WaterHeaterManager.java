@@ -24,6 +24,10 @@ class Tank extends JComponent {
 		this.temperatureLabel = temperatureLabel;
 	}
 
+	public int getLevel() {
+		return level;
+	}
+
 	public void setLevel(int level) {
 		if (level > 100 || level < 0) {
 			return;
@@ -41,18 +45,14 @@ class Tank extends JComponent {
 		setLevel(this.level - amount);
 	}
 
-	public int getLevel() {
-		return level;
+	public int getTemperature() {
+		return temperature;
 	}
 
 	public void setTemperature(int temperature) {
 		this.temperature = Math.max(0, Math.min(100, temperature));
 		temperatureLabel.setText("Temperature: " + this.temperature);
 		repaint();
-	}
-
-	public int getTemperature() {
-		return temperature;
 	}
 
 	public void increaseTemperature(int amount) {
