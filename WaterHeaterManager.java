@@ -29,6 +29,20 @@ class Tank extends JComponent {
 		repaint();
 	}
 
+	public void increaseLevel(int amount) {
+		this.level += amount;
+		repaint();
+	}
+
+	public void decreaseLevel(int amount) {
+		this.level -= amount;
+		repaint();
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
 	public void setTemperature(int temperature) {
 		this.temperature = Math.max(0, Math.min(100, temperature));
 		temperatureLabel.setText("Temperature: " + this.temperature);
@@ -64,20 +78,6 @@ class Tank extends JComponent {
 		// draw colored rectangle based on temperature at the bottom of the tank
 		g.setColor(temperatureToColor());
 		g.fillRect(0, getHeight() - level, getWidth(), level);
-	}
-
-	public void increaseLevel(int amount) {
-		this.level += amount;
-		repaint();
-	}
-
-	public void decreaseLevel(int amount) {
-		this.level -= amount;
-		repaint();
-	}
-
-	public int getTemperature() {
-		return temperature;
 	}
 }
 
