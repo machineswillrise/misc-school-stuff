@@ -56,7 +56,7 @@ class Refrigerator {
 	}
 }
 
-class Game {
+class RefrigeratorSimulation {
 	private static void addItems(Refrigerator refrigerator) {
 		Random rand = new Random();
 
