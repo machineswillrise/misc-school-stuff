@@ -14,10 +14,6 @@ interface CoffeeMaker {
 		System.out.println("Adding water");
 	}
 
-	default void addCoffee() {
-		System.out.println("Adding coffee");
-	}
-
 	default void addMilk() {
 		System.out.println("Adding milk");
 	}
