@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -24,12 +22,10 @@ enum Direction {
 }
 
 class Elevator {
-	private final List<Integer> floors;
 	public int currentFloor;
 	private final BlockingQueue<Integer> floorsToVisit;
 
-	public Elevator(List<Integer> floors, int currentFloor) {
-		this.floors = floors;
+	public Elevator(int currentFloor) {
 		this.currentFloor = currentFloor;
 		this.floorsToVisit = new LinkedBlockingQueue<>();
 	}
@@ -54,29 +50,19 @@ class Elevator {
 			return Direction.NONE;
 		}
 
-		for (int floor : floors) {
-			if (floorsToVisit.contains(floor)) {
-				if (floor > currentFloor) {
-					return Direction.UP;
-				} else {
-					return Direction.DOWN;
-				}
-			}
+		Integer floor = floorsToVisit.peek();
+		if (floor > currentFloor) {
+			return Direction.UP;
+		} else {
+			return Direction.DOWN;
 		}
-
-		return Direction.NONE;
 	}
 
 	@SuppressWarnings("BusyWait")
 	public static void main(String[] args) {
 		int numFloors = 10;
 
-		List<Integer> floors = new ArrayList<>();
-		for (int i = 0; i < numFloors; i++) {
-			floors.add(i + 1);
-		}
-
-		Elevator elevator = new Elevator(floors, 1);
+		Elevator elevator = new Elevator(1);
 		Person john = new Person("John", 5);
 		Person bob = new Person("Bob", 3);
 		elevator.enter(john, bob);
