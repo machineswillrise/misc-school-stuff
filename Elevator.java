@@ -67,6 +67,7 @@ class Elevator {
 		return Direction.NONE;
 	}
 
+	@SuppressWarnings("BusyWait")
 	public static void main(String[] args) {
 		int numFloors = 10;
 
@@ -93,6 +94,13 @@ class Elevator {
 
 			if (bob.isRightFloor(elevator.currentFloor)) {
 				elevator.leave(bob);
+			}
+
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				System.out.println("Interrupted, exiting");
+				return;
 			}
 		}
 	}
