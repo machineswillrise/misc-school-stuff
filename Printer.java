@@ -4,11 +4,7 @@
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.io.IOException;
-
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import org.cups4j.CupsClient;
 import org.cups4j.CupsPrinter;
