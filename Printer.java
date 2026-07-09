@@ -37,7 +37,7 @@ class Printer {
 
 	public static void main(String[] args) {
 		if (args.length < 1) {
-			System.err.println("Usage: jbang Printer.java <uri> <file_path>");
+			System.err.println("Usage: jbang Printer.java <file_path>");
 			return;
 		}
 
