@@ -96,6 +96,7 @@ class ColorPanel extends JToolBar {
 			add(Color.GREEN);
 			add(Color.BLUE);
 			add(Color.MAGENTA);
+			add(Color.BLACK);
 		}};
 
 		for (Color color : colors) {
