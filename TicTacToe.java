@@ -383,7 +383,6 @@ public class TicTacToe {
 				}
 
 				board.setPiece(newPosition, player);
-				System.out.println(board);
 				if (board.theWinner().isPresent()) {
 					System.out.println(board.theWinner().get() + " wins!");
 					break;
