@@ -1,3 +1,4 @@
+///usr/bin/env jbang "$0" "$@" ; exit $?
 //DEPS ch.qos.logback:logback-classic:1.5.18
 //DEPS org.cups4j:cups4j:0.8.2
 //DEPS org.slf4j:slf4j-api:2.0.17
