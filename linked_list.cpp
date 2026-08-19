@@ -1,3 +1,4 @@
+#include <iostream>
 #include <stdexcept>
 
 template <typename T>
@@ -134,3 +135,26 @@ public:
 		}
 	}
 };
+
+int main()
+{
+	int numbers[] = { 1, 2, 3, 4, 5 };
+	int length = sizeof(numbers) / sizeof(numbers[0]);
+	LinkedList<int> list(numbers, length);
+
+	std::cout << "Elements:" << "\n";
+	for (int i = 0; i < 5; i++)
+	{
+		std::cout << list.get(i) << " ";
+	}
+
+	std::cout << "\n" << "Removing first element..." << "\n";
+	list.remove(0);
+
+	std::cout << "New first element: " << list.get(0) << "\n";
+	std::cout << "New size: " << list.size() << "\n";
+
+	std::cout << "When this goes out of scope, the destructor will run and clean it up." << "\n";
+
+	return 0;
+}
