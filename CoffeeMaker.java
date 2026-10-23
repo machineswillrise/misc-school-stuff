@@ -47,7 +47,7 @@ class PodCoffeeMaker implements CoffeeMaker {
 	}
 
 	public static void main(String[] args) {
-		PodCoffeeMaker maker = new PodCoffeeMaker();
+		CoffeeMaker maker = new PodCoffeeMaker();
 		maker.fill(maker.mixture);
 		maker.brew();
 	}

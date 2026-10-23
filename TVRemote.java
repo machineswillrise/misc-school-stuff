@@ -275,14 +275,30 @@ class BottomButtons extends GridPanel {
 	public BottomButtons() {
 		super(3, 4);
 		SmallButton[][] buttons = {
-			{ new SmallButton("A"), new SmallButton("B"), new SmallButton("C"), new SmallButton("D") },
-			{ new SmallButton("📝", "E-Manual"), new SmallButton("🏈", "Sports"), new SmallButton("💬", "Closed-Caption"), new SmallButton("⏹️", "Stop") },
-			{ new SmallButton("⏪", "Rewind"), new SmallButton("▶️", "Play"), new SmallButton("⏸️", "Pause"), new SmallButton("⏩", "Fast-Forward") }
+			{
+				new SmallButton("A"),
+				new SmallButton("B"),
+				new SmallButton("C"),
+				new SmallButton("D")
+			},
+			{
+				new SmallButton("📝", "E-Manual"),
+				new SmallButton("🏈", "Sports"),
+				new SmallButton("💬", "Closed-Caption"),
+				new SmallButton("⏹️", "Stop")
+			},
+			{
+				new SmallButton("⏪", "Rewind"),
+				new SmallButton("▶️", "Play"),
+				new SmallButton("⏸️", "Pause"),
+				new SmallButton("⏩", "Fast-Forward")
+			}
 		};
 
 		addMultidimensional(buttons);
 	}
 }
+
 class TVRemote extends JFrame {
 	private RemotePanel mainPanel;
 

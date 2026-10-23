@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.RenderingHints;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -121,10 +122,9 @@ class ColorPanel extends JToolBar {
 }
 
 public class ImageEditor extends JFrame {
-	private JPanel mainPanel;
-	private JPanel topLeftPanel;
-	private ColorPanel colorPanel;
-	private Canvas canvas;
+	private final JPanel mainPanel, topLeftPanel;
+	private final ColorPanel colorPanel;
+	private final Canvas canvas;
 
 	public ImageEditor(String title) {
 		setSize(1024, 768);
